@@ -3,112 +3,244 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Homepage</title>
+    <title>Secret Santa Questionnaire</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
             background-color: #f0f8ff;
-            background-image: url('https://www.transparenttextures.com/patterns/diamond-upholstery.png');
-            background-size: cover;
+            background-image: url('https://www.transparenttextures.com/patterns/bright-squares.png');
             margin: 0;
             padding: 0;
             color: #333;
         }
         .container {
-            max-width: 800px;
-            margin: 0 auto;
+            width: 90%;
+            max-width: 600px;
+            margin: 40px auto;
             padding: 20px;
             background: rgba(255, 255, 255, 0.9);
             border-radius: 12px;
             box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-            margin-top: 40px;
+            border: 2px solid #D7263D;
         }
-        h1 {
+        h1, h2 {
             text-align: center;
-            color: #007bff;
+            color: #D7263D;
             margin-bottom: 20px;
         }
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin: 20px 0;
+        label {
+            font-weight: bold;
+            color: #D7263D;
+            display: block;
+            margin-bottom: 5px;
         }
-        .nav-links a {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s, transform 0.3s;
+        .form-group {
+            margin-bottom: 20px;
         }
-        .nav-links a:hover {
-            background-color: #0056b3;
-            transform: scale(1.05);
-        }
-        .content {
-            text-align: center;
-        }
-        .content h2 {
-            color: #333;
-            margin-bottom: 10px;
-        }
-        .content p {
-            line-height: 1.6;
-        }
-        .form-container {
-            margin-top: 30px;
-            text-align: center;
-        }
-        form {
-            display: inline-block;
-            text-align: left;
-        }
-        input, textarea {
+        select, input[type="text"], textarea {
             width: 100%;
             padding: 10px;
-            margin: 5px 0;
-            border-radius: 5px;
-            border: 1px solid #ccc;
+            border: 2px solid #D7263D;
+            border-radius: 8px;
+            box-sizing: border-box;
+            background-color: #fff8dc;
         }
-        button {
-            padding: 10px 20px;
-            background-color: #007bff;
+        textarea {
+            resize: vertical;
+        }
+        .submit-button {
+            width: 100%;
+            padding: 12px;
+            background-color: #D7263D;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             cursor: pointer;
+            font-size: 18px;
             transition: background-color 0.3s;
         }
-        button:hover {
-            background-color: #0056b3;
+        .submit-button:hover {
+            background-color: #b71c1c;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>Welcome to My Homepage</h1>
+    <h1>Secret Santa Questionnaire</h1>
     
-    <div class="nav-links">
-        <a href="SecretSanta.html">Secret Santa</a>
-        <a href="CoopersTown-with-Brett.html">Cooperstown with Brett</a>
-        <a href="santa2.html">Santa 2</a>
-    </div>
+    <form action="https://formspree.io/f/xqakpvlk" method="POST">
+        <!-- Name Section -->
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
 
-    <div class="content">
-        <h2>About This Site</h2>
-        <p>Welcome to my website! Feel free to explore the different pages using the links above.</p>
-    </div>
+        <!-- Favorite Things Section -->
+        <h2>Favorite Things</h2>
+        <div class="form-group">
+            <label for="color">Favorite Color:</label>
+            <input type="text" id="color" name="favorite_color">
+        </div>
+        <div class="form-group">
+            <label for="hobby">Favorite Hobby:</label>
+            <input type="text" id="hobby" name="favorite_hobby">
+        </div>
+        <div class="form-group">
+            <label for="food">Favorite Food:</label>
+            <input type="text" id="food" name="favorite_food">
+        </div>
+        <div class="form-group">
+            <label for="snack">Favorite Snack:</label>
+            <input type="text" id="snack" name="favorite_snack">
+        </div>
+        <div class="form-group">
+            <label for="candy">Favorite Candy:</label>
+            <input type="text" id="candy" name="favorite_candy">
+        </div>
+        <div class="form-group">
+            <label for="beverage">Favorite Beverage:</label>
+            <input type="text" id="beverage" name="favorite_beverage">
+        </div>
+        <div class="form-group">
+            <label for="movie">Favorite Movie:</label>
+            <input type="text" id="movie" name="favorite_movie">
+        </div>
+        <div class="form-group">
+            <label for="book">Favorite Book:</label>
+            <input type="text" id="book" name="favorite_book">
+        </div>
+        <div class="form-group">
+            <label for="scent">Favorite Scent:</label>
+            <input type="text" id="scent" name="favorite_scent">
+        </div>
+        <div class="form-group">
+            <label for="sports-team">Favorite Sports Team:</label>
+            <input type="text" id="sports-team" name="favorite_sports_team">
+        </div>
+        <div class="form-group">
+            <label for="store">Favorite Store:</label>
+            <input type="text" id="store" name="favorite_store">
+        </div>
 
-    <div class="form-container">
-        <h2>Contact Us</h2>
-        <form action="https://formspree.io/f/xqakpvlk" method="POST">
-            <input type="email" name="email" placeholder="Your email" required>
-            <textarea name="message" placeholder="Your message" rows="5" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </div>
+        <!-- Wish List Section -->
+        <h2>Wish List</h2>
+        <div class="form-group">
+            <textarea id="wishlist" name="wishlist" rows="4" placeholder="Enter items you would like..."></textarea>
+        </div>
+
+        <!-- This or That Section -->
+        <h2>This or That</h2>
+        <div class="form-group">
+            <label for="coffee-tea">Coffee or Tea:</label>
+            <select id="coffee-tea" name="coffee_or_tea">
+                <option value="coffee">Coffee</option>
+                <option value="tea">Tea</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="black-white">Black or White:</label>
+            <select id="black-white" name="black_or_white">
+                <option value="black">Black</option>
+                <option value="white">White</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="neutral-color">Neutral or Color:</label>
+            <select id="neutral-color" name="neutral_or_color">
+                <option value="neutral">Neutral</option>
+                <option value="color">Color</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="pastel-bright">Pastel or Bright:</label>
+            <select id="pastel-bright" name="pastel_or_bright">
+                <option value="pastel">Pastel</option>
+                <option value="bright">Bright</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="music-movie">Music or Movie:</label>
+            <select id="music-movie" name="music_or_movie">
+                <option value="music">Music</option>
+                <option value="movie">Movie</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="game-toy">Game or Toy:</label>
+            <select id="game-toy" name="game_or_toy">
+                <option value="game">Game</option>
+                <option value="toy">Toy</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="warm-cold">Warm or Cold:</label>
+            <select id="warm-cold" name="warm_or_cold">
+                <option value="warm">Warm</option>
+                <option value="cold">Cold</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="chocolate-vanilla">Chocolate or Vanilla:</label>
+            <select id="chocolate-vanilla" name="chocolate_or_vanilla">
+                <option value="chocolate">Chocolate</option>
+                <option value="vanilla">Vanilla</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="sweet-salty">Sweet or Salty:</label>
+            <select id="sweet-salty" name="sweet_or_salty">
+                <option value="sweet">Sweet</option>
+                <option value="salty">Salty</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="mints-gum">Mints or Gum:</label>
+            <select id="mints-gum" name="mints_or_gum">
+                <option value="mints">Mints</option>
+                <option value="gum">Gum</option>
+            </select>
+        </div>
+
+        <!-- Size Section -->
+        <h2>Size</h2>
+        <div class="form-group">
+            <label for="shirt">Shirt Size:</label>
+            <input type="text" id="shirt" name="shirt_size">
+        </div>
+        <div class="form-group">
+            <label for="shoe">Shoe Size:</label>
+            <input type="text" id="shoe" name="shoe_size">
+        </div>
+        <div class="form-group">
+            <label for="pants">Pants Size:</label>
+            <input type="text" id="pants" name="pants_size">
+        </div>
+
+        <!-- Specifics Section -->
+        <h2>Specifics</h2>
+        <div class="form-group">
+            <label for="allergies">Allergies:</label>
+            <textarea id="allergies" name="allergies" rows="2"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="dislikes">Dislikes:</label>
+            <textarea id="dislikes" name="dislikes" rows="2"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="need-more">Things I Need More Of:</label>
+            <textarea id="need-more" name="things_i_need_more_of" rows="2"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="dont-need">Things I Don't Need:</label>
+            <textarea id="dont-need" name="things_i_dont_need" rows="2"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-group">
+            <button type="submit" class="submit-button">Submit</button>
+        </div>
+    </form>
 </div>
 
 </body>
